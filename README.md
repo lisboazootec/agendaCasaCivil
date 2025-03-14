@@ -13,7 +13,7 @@
 
 > Um sistema full-stack moderno e eficiente para gerenciamento de agendas, construído com as melhores tecnologias do mercado!
 
-Este projeto foi desenvolvido como parte do desafio técnico proposto pela **Presidência da República (Secretaria-Executiva da Casa Civil / SSGINF / CGSE)** para o processo seletivo de grupos de pesquisa estratégicos.
+Este projeto foi desenvolvido como parte do desafio técnico proposto pela **Presidência da República (Secretaria-Executiva da Casa Civil / SSGINF / CGSE)** para o processo seletivo.
 
 ## ✨ Funcionalidades Principais
 
