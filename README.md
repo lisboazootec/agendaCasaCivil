@@ -140,8 +140,8 @@ A maneira mais simples e rápida de executar o projeto é usando o Docker Compos
 1. **Clone o Repositório:**
 
    ```bash
-   git clone <URL_DO_SEU_REPOSITORIO>
-   cd <NOME_DA_PASTA_DO_PROJETO>
+   git clone <https://github.com/lisboazootec/agendaCasaCivil>
+   cd <agendaCasaCivil>
    ```
 
    Substitua `<URL_DO_SEU_REPOSITORIO>` pela URL do seu repositório Git e `<NOME_DA_PASTA_DO_PROJETO>` pelo nome da pasta onde o projeto foi clonado.
