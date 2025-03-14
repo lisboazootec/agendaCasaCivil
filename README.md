@@ -182,8 +182,8 @@ Se você preferir executar o projeto *diretamente* na sua máquina (sem Docker),
 2. **Clone o Repositório:**
 
    ```bash
-   git clone <URL_DO_SEU_REPOSITORIO>
-   cd <NOME_DA_PASTA_DO_PROJETO>/agendas-api
+   git clone https://github.com/lisboazootec/agendaCasaCivil
+   cd agendaCasaCivil
    ```
 3. **Crie e Ative um Ambiente Virtual:**
 
