@@ -1,0 +1,11 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3  # O banco de dados em si (o arquivo) deve estar em um volume, não na imagem
+*.sqlite3
+# .dockerignore (agendas-api)
+venv
+.DS_Store

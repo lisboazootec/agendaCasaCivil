@@ -1,0 +1,113 @@
+# Geral
+.DS_Store
+*.log
+*.swp
+*~
+*.bak
+*.tmp
+*.temp
+*.orig
+*.rej
+*.patch
+._*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.egg-info
+*.egg-info/
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+parts/
+bin/
+sdist/
+var/
+*.sqlite3  # SQLite *local* (o do Docker está em um volume)
+*.sqlite3-journal
+.env  # Arquivo .env (informações sensíveis)
+instance/
+
+# Django
+*.mo
+*.pot
+staticfiles/  # Gerado pelo collectstatic (não precisa commitar)
+
+# Django migrations (opcional - se você *não* quiser commitar as migrações)
+# agenda/migrations/
+
+# Virtualenv (opcional - se você quiser commitar o ambiente virtual - *não* recomendado)
+# venv/
+
+# IDE/Editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Frontend (Node.js)
+node_modules/
+.nuxt/
+.output/
+dist/  # Arquivos de build do Nuxt (gerados, não precisam ser commitados)
+yarn.lock # Se usar yarn, comente essa linha. Descomente se usar npm.
+# package-lock.json #Se usar npm, comente essa linha. Descomente se usar yarn.
+
+# Docker (opcional - se você quiser commitar arquivos relacionados ao Docker - *não* recomendado)
+# docker-compose.override.yml  # Arquivo de override (contém informações sensíveis, como seu IP)
+# .dockerignore  # Se você não quer que o .dockerignore seja commitado (normalmente, não é necessário)
+
+# Logs de containers(opcional).
+logs/
+*.log
+
+# .env do frontend
+agendas-frontend/.env
+
+#VS Code Remote - Containers
+.devcontainer/
+
+#Outros arquivos gerados
+coverage.xml
+.pytest_cache/
+junit.xml
+
+# Segurança
+*.key
+*.pem
+*.cer
+*.p12
+*.pfx
+*.jks
+*.secrets
+*.tokens
+
+# Editor de texto Vim/Neovim
+*.swp
+*.swo
+*.un~
+*.backup
+
+# Editor de texto Emacs
+\#*#
+.\#*
+
+# Editor de texto Nano
+*.save
+*.bak
+
+# Editor de texto Kate
+*.kate-swp
+
+# .python-version, se usado com o pyenv
+.python-version
+
+# Tags geradas pelo ctags ou etags.
+tags
+TAGS

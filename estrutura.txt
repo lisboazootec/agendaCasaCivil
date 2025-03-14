@@ -1,0 +1,190 @@
+.
+├── agendas-api
+│   ├── agenda
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── __init__.py
+│   │   ├── management
+│   │   │   └── commands
+│   │   │       ├── populate_agenda.py
+│   │   │       └── __pycache__
+│   │   │           └── populate_agenda.cpython-312.pyc
+│   │   ├── migrations
+│   │   │   ├── 0001_initial.py
+│   │   │   ├── 0002_alter_agenda_options.py
+│   │   │   ├── 0003_alter_agenda_estadoatualagenda_alter_agenda_local_and_more.py
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       ├── 0001_initial.cpython-312.pyc
+│   │   │       ├── 0002_alter_agenda_options.cpython-312.pyc
+│   │   │       ├── 0003_alter_agenda_estadoatualagenda_alter_agenda_local_and_more.cpython-312.pyc
+│   │   │       └── __init__.cpython-312.pyc
+│   │   ├── models.py
+│   │   ├── __pycache__
+│   │   │   ├── admin.cpython-312.pyc
+│   │   │   ├── apps.cpython-312.pyc
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── models.cpython-312.pyc
+│   │   │   ├── serializers.cpython-312.pyc
+│   │   │   ├── tests.cpython-312.pyc
+│   │   │   ├── urls.cpython-312.pyc
+│   │   │   └── views.cpython-312.pyc
+│   │   ├── serializers.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── core
+│   │   ├── asgi.py
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── settings.cpython-312.pyc
+│   │   │   ├── urls.cpython-312.pyc
+│   │   │   └── wsgi.cpython-312.pyc
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── db.sqlite3
+│   ├── Dockerfile
+│   ├── estrutura.txt
+│   ├── manage.py
+│   ├── READ.md
+│   └── requirements.txt
+├── agendas-frontend
+│   ├── app.vue
+│   ├── assets
+│   │   └── css
+│   │       ├── globals.css
+│   │       └── tailwind.css
+│   ├── components
+│   │   └── ui
+│   │       ├── alert
+│   │       │   ├── AlertDescription.vue
+│   │       │   ├── AlertTitle.vue
+│   │       │   ├── Alert.vue
+│   │       │   └── index.ts
+│   │       ├── button
+│   │       │   ├── Button.vue
+│   │       │   └── index.ts
+│   │       ├── calendar
+│   │       │   ├── CalendarCellTrigger.vue
+│   │       │   ├── CalendarCell.vue
+│   │       │   ├── CalendarGridBody.vue
+│   │       │   ├── CalendarGridHead.vue
+│   │       │   ├── CalendarGridRow.vue
+│   │       │   ├── CalendarGrid.vue
+│   │       │   ├── CalendarHeadCell.vue
+│   │       │   ├── CalendarHeader.vue
+│   │       │   ├── CalendarHeading.vue
+│   │       │   ├── CalendarNextButton.vue
+│   │       │   ├── CalendarPrevButton.vue
+│   │       │   ├── Calendar.vue
+│   │       │   └── index.ts
+│   │       ├── card
+│   │       │   ├── CardContent.vue
+│   │       │   ├── CardDescription.vue
+│   │       │   ├── CardFooter.vue
+│   │       │   ├── CardHeader.vue
+│   │       │   ├── CardTitle.vue
+│   │       │   ├── Card.vue
+│   │       │   └── index.ts
+│   │       ├── dialog
+│   │       │   ├── DialogClose.vue
+│   │       │   ├── DialogContent.vue
+│   │       │   ├── DialogDescription.vue
+│   │       │   ├── DialogFooter.vue
+│   │       │   ├── DialogHeader.vue
+│   │       │   ├── DialogScrollContent.vue
+│   │       │   ├── DialogTitle.vue
+│   │       │   ├── DialogTrigger.vue
+│   │       │   ├── Dialog.vue
+│   │       │   └── index.ts
+│   │       ├── form
+│   │       │   ├── FormControl.vue
+│   │       │   ├── FormDescription.vue
+│   │       │   ├── FormItem.vue
+│   │       │   ├── FormLabel.vue
+│   │       │   ├── FormMessage.vue
+│   │       │   ├── index.ts
+│   │       │   ├── injectionKeys.ts
+│   │       │   └── useFormField.ts
+│   │       ├── input
+│   │       │   ├── index.ts
+│   │       │   └── Input.vue
+│   │       ├── label
+│   │       │   ├── index.ts
+│   │       │   └── Label.vue
+│   │       ├── popover
+│   │       │   ├── index.ts
+│   │       │   ├── PopoverContent.vue
+│   │       │   ├── PopoverTrigger.vue
+│   │       │   └── Popover.vue
+│   │       ├── select
+│   │       │   ├── index.ts
+│   │       │   ├── SelectContent.vue
+│   │       │   ├── SelectGroup.vue
+│   │       │   ├── SelectItemText.vue
+│   │       │   ├── SelectItem.vue
+│   │       │   ├── SelectLabel.vue
+│   │       │   ├── SelectScrollDownButton.vue
+│   │       │   ├── SelectScrollUpButton.vue
+│   │       │   ├── SelectSeparator.vue
+│   │       │   ├── SelectTrigger.vue
+│   │       │   ├── SelectValue.vue
+│   │       │   └── Select.vue
+│   │       ├── table
+│   │       │   ├── index.ts
+│   │       │   ├── TableBody.vue
+│   │       │   ├── TableCaption.vue
+│   │       │   ├── TableCell.vue
+│   │       │   ├── TableEmpty.vue
+│   │       │   ├── TableFooter.vue
+│   │       │   ├── TableHeader.vue
+│   │       │   ├── TableHead.vue
+│   │       │   ├── TableRow.vue
+│   │       │   └── Table.vue
+│   │       ├── textarea
+│   │       │   ├── index.ts
+│   │       │   └── Textarea.vue
+│   │       └── toast
+│   │           ├── index.ts
+│   │           ├── ToastAction.vue
+│   │           ├── ToastClose.vue
+│   │           ├── ToastDescription.vue
+│   │           ├── Toaster.vue
+│   │           ├── ToastProvider.vue
+│   │           ├── ToastTitle.vue
+│   │           ├── ToastViewport.vue
+│   │           ├── Toast.vue
+│   │           └── use-toast.ts
+│   ├── components.json
+│   ├── composables
+│   │   ├── useApi.ts
+│   │   └── useToaster.ts
+│   ├── Dockerfile
+│   ├── estrutura.txt
+│   ├── lib
+│   │   └── utils.ts
+│   ├── nuxt.config.ts
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── pages
+│   │   ├── create.vue
+│   │   ├── edit
+│   │   │   └── [id].vue
+│   │   └── index.vue
+│   ├── public
+│   │   ├── favicon.ico
+│   │   └── robots.txt
+│   ├── README.md
+│   ├── server
+│   │   └── tsconfig.json
+│   ├── tailwind.config.js
+│   ├── tsconfig.json
+│   └── types
+│       └── agenda.ts
+├── docker-compose.yml
+├── estrutura.txt
+└── READ.md
+
+36 directories, 152 files

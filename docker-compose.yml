@@ -1,0 +1,73 @@
+version: "3"
+
+services:
+  backend:
+    build:
+      context: ./agendas-api
+      dockerfile: Dockerfile
+    volumes:
+      - ./agendas-api:/app
+      - backend_data:/app/data
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=core.settings
+      - SECRET_KEY=django-insecure-%&5ltq@gu89itaj&#_3xv%g7p%qtx7i2yk2ccv^%9%0mi9x#v1
+      - DEBUG=True
+    command: >
+      sh -c "
+        python manage.py migrate &&
+        python manage.py populate_agenda &&
+        python manage.py runserver 0.0.0.0:8000
+      "
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./agendas-frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./agendas-frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NUXT_PUBLIC_API_BASE=http://localhost:8000/api
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=3000
+    depends_on:
+      - backend
+    command: npm run dev -- --host 0.0.0.0
+    restart: unless-stopped
+
+  access_links:
+    image: alpine:latest
+    depends_on:
+      - backend
+      - frontend
+    command: >
+      sh -c "
+        apk add --no-cache curl &&
+        echo '╔═════════════════════════════════════════════════════════════╗' &&
+        echo '║                AGENDA SYSTEM - INFORMAÇÕES                  ║' &&
+        echo '╠═════════════════════════════════════════════════════════════╣' &&
+        echo '║                                                             ║' &&
+        echo '║  ✨ APLICAÇÃO INICIADA COM SUCESSO!                         ║' &&
+        echo '║                                                             ║' &&
+        echo '║  📱 Frontend: http://localhost:3000                         ║' &&
+        echo '║  ⚙️ API: http://localhost:8000/api/                          ║' &&
+        echo '║  📚 Swagger: http://localhost:8000/swagger/                 ║' &&
+        echo '║  📖 Redoc: http://localhost:8000/redoc/                     ║' &&
+        echo '║                                                             ║' &&
+        echo '║  ❓ Problemas com requisições PUT/POST?                     ║' &&
+        echo '║  Certifique-se de enviar datas no formato:                  ║' &&
+        echo '║  YYYY-MM-DDThh:mm:ssZ (exemplo: 2025-03-14T15:30:00Z)       ║' &&
+        echo '║                                                             ║' &&
+        echo '╚═════════════════════════════════════════════════════════════╝' &&
+        echo 'Logs do sistema abaixo:' &&
+        echo '' &&
+        tail -f /dev/null
+      "
+
+volumes:
+  backend_data:

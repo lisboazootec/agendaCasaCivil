@@ -1,0 +1,21 @@
+# Geral
+.git
+.gitignore
+*.md
+LICENSE
+.dockerignore
+docker-compose.yml
+
+
+# Node.js
+agendas-frontend/node_modules/
+agendas-frontend/.nuxt/
+agendas-frontend/.output/
+agendas-frontend/dist/
+
+
+# IDEs e Editores
+.idea/
+.vscode/
+*.swp
+*~
